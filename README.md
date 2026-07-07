@@ -1,4 +1,4 @@
-# Hazard-Aware Guidance Dataset
+# Hazard-Aware Guidance (HAG) Dataset
 
 This repository is the planned release page for the dataset and code package associated with the paper:
 
