@@ -1,0 +1,15 @@
+{
+  "purpose": "Example material slot mapping for ProceduralManhole",
+  "slots": {
+    "concreteMaterial": "Concrete_Rim_And_Wall material asset",
+    "pipeMaterial": "Pipe_Interior_Or_Concrete material asset",
+    "coverMaterial": "CastIron_Cover material asset",
+    "darkMouthMaterial": "Dark_Opening material asset",
+    "groundMaterial": "Road_Or_Sidewalk_Ground material asset"
+  },
+  "notes": [
+    "Leave a slot empty to use the plugin's automatic simple material.",
+    "Create multiple Unity Material assets per slot when you want dataset variation.",
+    "Texture files can live in this folder beside the Material assets."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "purpose": "Example material slot mapping for ProceduralConstructionPit",
+  "slots": {
+    "groundMaterial": "Road_Or_Sidewalk_Ground material asset",
+    "soilMaterial": "Excavated_Soil material asset",
+    "darkPitMaterial": "Dark_Pit_Floor material asset",
+    "debrisMaterial": "Debris_Rubble material asset",
+    "brokenEdgeMaterial": "Broken_Ground_Edge material asset, optional because broken edge can reuse ground material"
+  },
+  "notes": [
+    "Leave a slot empty to use automatic simple materials.",
+    "Use multiple variants per slot when collecting dataset images.",
+    "The generation seed controls geometry, not material asset selection."
+  ]
+}
