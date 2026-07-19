@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structured-field Evaluation on an Independently Annotated Subset 多障碍物标注工具</title>
+  <link rel="stylesheet" href="/static/styles.css?v=20260609-roles">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Structured-field Evaluation on an Independently Annotated Subset 多障碍物标注</h1>
+      <p id="current-path">正在读取图片...</p>
+    </div>
+    <div class="top-actions">
+      <span id="save-state" class="save-state">未修改</span>
+      <button id="backup-btn" class="secondary">立即备份</button>
+      <a class="button secondary" href="/api/export">导出 JSON</a>
+      <button id="save-btn" class="primary">保存草稿</button>
+      <button id="complete-btn" class="complete">标记完成</button>
+      <button id="complete-role-review-btn" class="role-complete">完成角色检查</button>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <aside class="sidebar left-panel">
+      <section class="progress-block">
+        <div class="progress-title"><strong>标注进度</strong><span id="progress-text">0 / 0</span></div>
+        <div class="progress-track"><div id="progress-fill"></div></div>
+        <div class="summary-row">
+          <span><b id="draft-count">0</b> 草稿</span>
+          <span><b id="unannotated-count">0</b> 未标注</span>
+        </div>
+      </section>
+      <section class="progress-block role-progress">
+        <div class="progress-title"><strong>角色检查</strong><span id="role-progress-text">0 / 0</span></div>
+        <div class="progress-track"><div id="role-progress-fill"></div></div>
+      </section>
+      <div class="filter-row">
+        <select id="status-filter" aria-label="状态筛选">
+          <option value="all">全部图片</option>
+          <option value="unannotated">未标注</option>
+          <option value="draft">草稿</option>
+          <option value="completed">已完成</option>
+        </select>
+        <button id="next-open-btn" title="跳转到下一张未完成图片">下一张未完成</button>
+        <select id="role-filter" aria-label="角色检查筛选">
+          <option value="all">全部角色状态</option>
+          <option value="pending">角色待检查</option>
+          <option value="completed">角色已检查</option>
+        </select>
+        <button id="next-role-pending-btn" title="跳转到下一张角色待检查图片">下一张角色待检查</button>
+      </div>
+      <div id="image-list" class="image-list"></div>
+    </aside>
+
+    <section class="canvas-panel">
+      <div class="canvas-toolbar">
+        <div class="tool-group">
+          <button id="prev-btn" title="上一张图片（A）">上一张</button>
+          <button id="next-btn" title="下一张图片（D）">下一张</button>
+        </div>
+        <div class="tool-group">
+          <button id="select-tool" class="active" title="选择、移动或缩放标注框（V）">选择</button>
+          <button id="draw-tool" title="拖动绘制新障碍框（N）">绘制障碍框</button>
+        </div>
+        <div class="tool-group">
+          <button id="zoom-out" title="缩小">−</button>
+          <span id="zoom-label">适应</span>
+          <button id="zoom-in" title="放大">＋</button>
+          <button id="fit-btn" title="适应窗口">适应窗口</button>
+        </div>
+      </div>
+      <div id="canvas-viewport" class="canvas-viewport">
+        <div id="empty-canvas" class="empty-canvas">请将图片放入 set 文件夹</div>
+        <div id="image-stage" class="image-stage" hidden>
+          <img id="main-image" alt="当前标注图片" draggable="false">
+          <svg id="overlay" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+      <div class="canvas-footer">
+        <span>绘制：点击“绘制障碍框”后拖动</span>
+        <span>移动：拖动标注框</span>
+        <span>缩放：拖动右下角方块</span>
+        <span>平移：按住 Space 拖动</span>
+      </div>
+    </section>
+
+    <aside class="sidebar right-panel">
+      <section class="hazard-header">
+        <div>
+          <h2>障碍物</h2>
+          <span id="hazard-count">0 个</span>
+        </div>
+        <div class="icon-actions">
+          <button id="add-btn" title="添加并绘制障碍框">＋ 添加</button>
+          <button id="duplicate-btn" title="复制当前障碍">复制</button>
+          <button id="delete-btn" class="danger" title="删除当前障碍（Delete）">删除</button>
+        </div>
+      </section>
+      <div id="hazard-list" class="hazard-list"></div>
+
+      <form id="hazard-form" class="editor" autocomplete="off">
+        <div id="no-selection" class="no-selection">选择或绘制一个障碍物后编辑字段</div>
+        <div id="editor-fields" hidden>
+          <label>
+            障碍名称（英文）
+            <input id="object-name" list="object-name-options" placeholder="e.g. open manhole">
+            <datalist id="object-name-options"></datalist>
+          </label>
+
+          <fieldset>
+            <legend>障碍类别</legend>
+            <div class="category-grid">
+              <label><input type="radio" name="category" value="GROUND"><span>GROUND<br><small>地面障碍</small></span></label>
+              <label><input type="radio" name="category" value="PIT"><span>PIT<br><small>坑洞落差</small></span></label>
+              <label><input type="radio" name="category" value="OVERHEAD"><span>OVERHEAD<br><small>上身障碍</small></span></label>
+            </div>
+          </fieldset>
+
+          <label>
+            距离（步数）
+            <input id="distance-steps" type="number" min="1" step="1" placeholder="请输入正整数">
+          </label>
+
+          <fieldset>
+            <legend>方向区间</legend>
+            <div class="direction-grid">
+              <label><input type="radio" name="direction" value="left"><span>左侧<br><small>45°–90°</small></span></label>
+              <label><input type="radio" name="direction" value="left_ahead"><span>左前方<br><small>18°–45°</small></span></label>
+              <label><input type="radio" name="direction" value="slightly_left_ahead"><span>略偏左前<br><small>7°–18°</small></span></label>
+              <label><input type="radio" name="direction" value="ahead"><span>正前方<br><small>−7°–7°</small></span></label>
+              <label><input type="radio" name="direction" value="slightly_right_ahead"><span>略偏右前<br><small>−18°–−7°</small></span></label>
+              <label><input type="radio" name="direction" value="right_ahead"><span>右前方<br><small>−45°–−18°</small></span></label>
+              <label><input type="radio" name="direction" value="right"><span>右侧<br><small>−90°–−45°</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>评估角色</legend>
+            <div class="role-grid">
+              <label><input type="radio" name="evaluation-role" value="required"><span>必须识别<br><small>未识别计 FN</small></span></label>
+              <label><input type="radio" name="evaluation-role" value="optional"><span>可选识别<br><small>未识别不扣分</small></span></label>
+              <label><input type="radio" name="evaluation-role" value="ignore"><span>忽略<br><small>不参与评分</small></span></label>
+            </div>
+          </fieldset>
+
+          <label>
+            角色判定备注（可选）
+            <textarea id="role-notes" rows="2"></textarea>
+          </label>
+
+          <label>
+            障碍备注（可选）
+            <textarea id="hazard-notes" rows="2"></textarea>
+          </label>
+          <details>
+            <summary>框坐标</summary>
+            <pre id="bbox-readout"></pre>
+          </details>
+        </div>
+      </form>
+
+      <label class="image-notes">
+        图片备注（可选）
+        <textarea id="image-notes" rows="3"></textarea>
+      </label>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/static/app.js?v=20260609-roles"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+[
+  {
+    "image": "safe.png",
+    "objects": []
+  },
+  {
+    "image": "empty_prediction.png",
+    "objects": [
+      {
+        "name": "open pit",
+        "categories": ["PIT"],
+        "distance_steps": 2,
+        "distance_raw": "about 2 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "multi_object.png",
+    "objects": [
+      {
+        "name": "low branch",
+        "categories": ["OVERHEAD"],
+        "distance_steps": 4,
+        "distance_raw": "about 4 steps ahead"
+      },
+      {
+        "name": "traffic cone",
+        "categories": ["GROUND"],
+        "distance_steps": 6,
+        "distance_raw": "about 6 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "unknown_distance.png",
+    "objects": [
+      {
+        "name": "stairs",
+        "categories": ["GROUND"],
+        "distance_steps": null,
+        "distance_raw": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "image": "safe.png",
+    "objects": [
+      {
+        "name": "shadow",
+        "categories": ["GROUND"],
+        "distance_steps": 3,
+        "distance_raw": "about 3 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "empty_prediction.png",
+    "objects": []
+  },
+  {
+    "image": "multi_object.png",
+    "objects": [
+      {
+        "name": "traffic cone",
+        "categories": ["GROUND"],
+        "distance_steps": 5,
+        "distance_raw": "about 5 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "unknown_distance.png",
+    "objects": []
+  }
+]

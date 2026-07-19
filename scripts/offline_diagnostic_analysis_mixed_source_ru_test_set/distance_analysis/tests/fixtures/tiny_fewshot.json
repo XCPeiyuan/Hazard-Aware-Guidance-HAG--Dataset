@@ -1,0 +1,32 @@
+[
+  {
+    "image": "safe.png",
+    "objects": [
+      {
+        "name": "false positive curb",
+        "categories": ["GROUND"],
+        "distance_steps": 8,
+        "distance_raw": "about 8 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "empty_prediction.png",
+    "objects": []
+  },
+  {
+    "image": "multi_object.png",
+    "objects": [
+      {
+        "name": "fewshot branch prediction",
+        "categories": ["OVERHEAD"],
+        "distance_steps": 5,
+        "distance_raw": "about 5 steps ahead"
+      }
+    ]
+  },
+  {
+    "image": "unknown_distance.png",
+    "objects": []
+  }
+]

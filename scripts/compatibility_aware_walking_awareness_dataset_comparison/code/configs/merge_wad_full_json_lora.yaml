@@ -1,0 +1,13 @@
+### model
+model_name_or_path: <REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM/Qwen2.5-VL-7B-Instruct
+adapter_name_or_path: <REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/checkpoints/wad_full_json_lora
+template: qwen2_vl
+finetuning_type: lora
+trust_remote_code: true
+
+### export
+export_dir: <REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/models/Qwen2.5-VL-7B-WAD-Full-JSON
+export_size: 5
+export_device: cpu
+export_legacy_format: false
+
