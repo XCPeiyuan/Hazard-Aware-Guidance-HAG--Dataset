@@ -6,8 +6,8 @@ This repository is the planned release page for the dataset and code package ass
 
 ## Associated Hugging Face Releases
 
-- **Model weights:** [HAG-Qwen2.5-VL-7B-RU](https://huggingface.co/xcyuan/HAG-Qwen2.5-VL-7B-RU)
-- **Dataset:** [Hazard-Aware-Guidance-HAG_Dataset](https://huggingface.co/datasets/xcyuan/Hazard-Aware-Guidance-HAG_Dataset)
+- **Model weights:** [Hugging Face: HAG-Qwen2.5-VL-7B-RU](https://huggingface.co/xcyuan/HAG-Qwen2.5-VL-7B-RU)
+- **Dataset (Coming soon):** [Hugging Face: Hazard-Aware-Guidance-HAG_Dataset](https://huggingface.co/datasets/xcyuan/Hazard-Aware-Guidance-HAG_Dataset)
 
 Model weights and the dataset release will be hosted separately on Hugging Face;
 they are not included in this GitHub repository. This repository contains the
