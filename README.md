@@ -4,6 +4,16 @@ This repository is the planned release page for the dataset and code package ass
 
 **MLLM-Assisted Dataset Construction for Hazard-Aware Guidance for Individuals with Visual Impairments**
 
+## Model Weights
+
+The merged Qwen2.5-VL-7B model fine-tuned on the mixed-source
+Real-world + Unity-based (R+U) dataset is available on Hugging Face:
+
+[HAG-Qwen2.5-VL-7B-RU](https://huggingface.co/xcyuan/HAG-Qwen2.5-VL-7B-RU)
+
+The model weights are hosted on Hugging Face and are not included in this
+GitHub repository.
+
 ## Status
 
 The release package is currently under preparation. No dataset files are currently published in this repository.
