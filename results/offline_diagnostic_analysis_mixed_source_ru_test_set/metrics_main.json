@@ -1,0 +1,263 @@
+{
+  "fewshot": {
+    "overall": {
+      "detected": 366,
+      "missed": 726,
+      "total": 1092,
+      "recall": 0.33516483516483514
+    },
+    "by_category": {
+      "GROUND": {
+        "detected": 337,
+        "missed": 547,
+        "total": 884,
+        "recall": 0.38122171945701355
+      },
+      "OVERHEAD": {
+        "detected": 1,
+        "missed": 83,
+        "total": 84,
+        "recall": 0.011904761904761904
+      },
+      "PIT": {
+        "detected": 28,
+        "missed": 96,
+        "total": 124,
+        "recall": 0.22580645161290322
+      }
+    },
+    "by_distance_bin": {
+      "Near": {
+        "detected": 117,
+        "missed": 292,
+        "total": 409,
+        "recall": 0.2860635696821516
+      },
+      "Medium": {
+        "detected": 146,
+        "missed": 190,
+        "total": 336,
+        "recall": 0.43452380952380953
+      },
+      "Far": {
+        "detected": 103,
+        "missed": 244,
+        "total": 347,
+        "recall": 0.2968299711815562
+      }
+    },
+    "by_category_distance": {
+      "GROUND": {
+        "Far": {
+          "detected": 99,
+          "missed": 185,
+          "total": 284,
+          "recall": 0.3485915492957746
+        },
+        "Medium": {
+          "detected": 134,
+          "missed": 145,
+          "total": 279,
+          "recall": 0.48028673835125446
+        },
+        "Near": {
+          "detected": 104,
+          "missed": 217,
+          "total": 321,
+          "recall": 0.32398753894080995
+        }
+      },
+      "OVERHEAD": {
+        "Far": {
+          "detected": 0,
+          "missed": 28,
+          "total": 28,
+          "recall": 0.0
+        },
+        "Medium": {
+          "detected": 1,
+          "missed": 18,
+          "total": 19,
+          "recall": 0.05263157894736842
+        },
+        "Near": {
+          "detected": 0,
+          "missed": 37,
+          "total": 37,
+          "recall": 0.0
+        }
+      },
+      "PIT": {
+        "Far": {
+          "detected": 4,
+          "missed": 31,
+          "total": 35,
+          "recall": 0.11428571428571428
+        },
+        "Medium": {
+          "detected": 11,
+          "missed": 27,
+          "total": 38,
+          "recall": 0.2894736842105263
+        },
+        "Near": {
+          "detected": 13,
+          "missed": 38,
+          "total": 51,
+          "recall": 0.2549019607843137
+        }
+      }
+    }
+  },
+  "ours": {
+    "overall": {
+      "detected": 628,
+      "missed": 464,
+      "total": 1092,
+      "recall": 0.575091575091575
+    },
+    "by_category": {
+      "GROUND": {
+        "detected": 485,
+        "missed": 399,
+        "total": 884,
+        "recall": 0.5486425339366516
+      },
+      "OVERHEAD": {
+        "detected": 61,
+        "missed": 23,
+        "total": 84,
+        "recall": 0.7261904761904762
+      },
+      "PIT": {
+        "detected": 82,
+        "missed": 42,
+        "total": 124,
+        "recall": 0.6612903225806451
+      }
+    },
+    "by_distance_bin": {
+      "Near": {
+        "detected": 230,
+        "missed": 179,
+        "total": 409,
+        "recall": 0.5623471882640587
+      },
+      "Medium": {
+        "detected": 225,
+        "missed": 111,
+        "total": 336,
+        "recall": 0.6696428571428571
+      },
+      "Far": {
+        "detected": 173,
+        "missed": 174,
+        "total": 347,
+        "recall": 0.49855907780979825
+      }
+    },
+    "by_category_distance": {
+      "GROUND": {
+        "Far": {
+          "detected": 131,
+          "missed": 153,
+          "total": 284,
+          "recall": 0.4612676056338028
+        },
+        "Medium": {
+          "detected": 183,
+          "missed": 96,
+          "total": 279,
+          "recall": 0.6559139784946236
+        },
+        "Near": {
+          "detected": 171,
+          "missed": 150,
+          "total": 321,
+          "recall": 0.5327102803738317
+        }
+      },
+      "OVERHEAD": {
+        "Far": {
+          "detected": 16,
+          "missed": 12,
+          "total": 28,
+          "recall": 0.5714285714285714
+        },
+        "Medium": {
+          "detected": 17,
+          "missed": 2,
+          "total": 19,
+          "recall": 0.8947368421052632
+        },
+        "Near": {
+          "detected": 28,
+          "missed": 9,
+          "total": 37,
+          "recall": 0.7567567567567568
+        }
+      },
+      "PIT": {
+        "Far": {
+          "detected": 26,
+          "missed": 9,
+          "total": 35,
+          "recall": 0.7428571428571429
+        },
+        "Medium": {
+          "detected": 25,
+          "missed": 13,
+          "total": 38,
+          "recall": 0.6578947368421053
+        },
+        "Near": {
+          "detected": 31,
+          "missed": 20,
+          "total": 51,
+          "recall": 0.6078431372549019
+        }
+      }
+    }
+  },
+  "comparison": {
+    "overall": {
+      "ours": 0.575091575091575,
+      "fewshot": 0.33516483516483514,
+      "delta": 0.2399267399267399
+    },
+    "by_category": {
+      "GROUND": {
+        "ours": 0.5486425339366516,
+        "fewshot": 0.38122171945701355,
+        "delta": 0.16742081447963808
+      },
+      "OVERHEAD": {
+        "ours": 0.7261904761904762,
+        "fewshot": 0.011904761904761904,
+        "delta": 0.7142857142857143
+      },
+      "PIT": {
+        "ours": 0.6612903225806451,
+        "fewshot": 0.22580645161290322,
+        "delta": 0.4354838709677419
+      }
+    },
+    "by_distance_bin": {
+      "Near": {
+        "ours": 0.5623471882640587,
+        "fewshot": 0.2860635696821516,
+        "delta": 0.27628361858190714
+      },
+      "Medium": {
+        "ours": 0.6696428571428571,
+        "fewshot": 0.43452380952380953,
+        "delta": 0.23511904761904756
+      },
+      "Far": {
+        "ours": 0.49855907780979825,
+        "fewshot": 0.2968299711815562,
+        "delta": 0.20172910662824206
+      }
+    }
+  }
+}

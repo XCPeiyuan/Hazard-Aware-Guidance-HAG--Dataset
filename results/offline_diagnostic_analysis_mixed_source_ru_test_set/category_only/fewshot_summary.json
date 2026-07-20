@@ -1,0 +1,47 @@
+{
+  "method": "category_presence_only",
+  "record_count": 863,
+  "prediction_file": "qwen25vl7bfs_reviewed.json",
+  "reference_file": "testset_reviewed.json",
+  "categories": {
+    "OVERHEAD": {
+      "display_name": "Upper-body Hazard",
+      "tp": 0,
+      "fn": 84,
+      "fp": 0,
+      "tn": 779,
+      "reference_positive_records": 84,
+      "predicted_positive_records": 0,
+      "missed_positive_records": 84,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0
+    },
+    "PIT": {
+      "display_name": "Pitfall Hazard",
+      "tp": 35,
+      "fn": 87,
+      "fp": 0,
+      "tn": 741,
+      "reference_positive_records": 122,
+      "predicted_positive_records": 35,
+      "missed_positive_records": 87,
+      "recall": 0.28688524590163933,
+      "precision": 1.0,
+      "f1": 0.4458598726114649
+    },
+    "GROUND": {
+      "display_name": "Common Obstacle",
+      "tp": 357,
+      "fn": 142,
+      "fp": 37,
+      "tn": 327,
+      "reference_positive_records": 499,
+      "predicted_positive_records": 394,
+      "missed_positive_records": 142,
+      "recall": 0.7154308617234469,
+      "precision": 0.9060913705583756,
+      "f1": 0.799552071668533
+    }
+  }
+}

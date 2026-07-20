@@ -1,0 +1,57 @@
+{
+  "conditions": [
+    {
+      "dataset": "our_test_non_safe",
+      "model": "WAD alter-only",
+      "reference": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/test/our_test_reference.txt",
+      "prediction": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/outputs/alter_only_on_our_test.txt",
+      "source_n": 340,
+      "evaluation_n": 254,
+      "unique_image_labels": 340,
+      "duplicate_image_label_extra_records": 0,
+      "alter_extraction_failed_count": 0,
+      "first_image": "img_000007.png",
+      "last_image": "img_001221_m.png"
+    },
+    {
+      "dataset": "our_test_non_safe",
+      "model": "WAD full-JSON",
+      "reference": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/test/our_test_reference.txt",
+      "prediction": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/outputs/full_json_alter_on_our_test.txt",
+      "source_n": 340,
+      "evaluation_n": 254,
+      "unique_image_labels": 340,
+      "duplicate_image_label_extra_records": 0,
+      "alter_extraction_failed_count": 2,
+      "first_image": "img_000007.png",
+      "last_image": "img_001221_m.png"
+    },
+    {
+      "dataset": "wad_test",
+      "model": "WAD alter-only",
+      "reference": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/test/walkvlm_test_reference.txt",
+      "prediction": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/outputs/alter_only_on_wad_test.txt",
+      "source_n": 1007,
+      "evaluation_n": 1007,
+      "unique_image_labels": 1007,
+      "duplicate_image_label_extra_records": 0,
+      "alter_extraction_failed_count": 0,
+      "first_image": "20240918-youtube_short_799d509974f4eca2f0ab4811addfab1f_37s.frame/0.jpg",
+      "last_image": "20240918-youtube_short_94773cc21cce7b731814c43df7441d6b_2m10s.frame/0.jpg"
+    },
+    {
+      "dataset": "wad_test",
+      "model": "WAD full-JSON",
+      "reference": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/test/walkvlm_test_reference.txt",
+      "prediction": "<REMOTE_WORKSPACE_ROOT>/root_ginger_expert/codes/WalkVLM-New/outputs/full_json_alter_on_wad_test.txt",
+      "source_n": 1007,
+      "evaluation_n": 1007,
+      "unique_image_labels": 1007,
+      "duplicate_image_label_extra_records": 0,
+      "alter_extraction_failed_count": 4,
+      "first_image": "20240918-youtube_short_799d509974f4eca2f0ab4811addfab1f_37s.frame/0.jpg",
+      "last_image": "20240918-youtube_short_94773cc21cce7b731814c43df7441d6b_2m10s.frame/0.jpg"
+    }
+  ],
+  "created_at": "2026-06-06 04:29:30"
+}

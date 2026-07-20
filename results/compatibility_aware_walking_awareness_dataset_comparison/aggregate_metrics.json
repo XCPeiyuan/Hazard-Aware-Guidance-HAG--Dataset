@@ -1,0 +1,54 @@
+[
+  {
+    "dataset": "our_test_non_safe",
+    "model": "WAD alter-only",
+    "n": 254,
+    "bertscore_precision": 0.8507114317942792,
+    "bertscore_recall": 0.8471238653021534,
+    "bertscore_f1": 0.8488793225269619,
+    "lave_hazard": 3.6181102362204722,
+    "lave_guide": 3.0196850393700787,
+    "lave_format": 5.862204724409449,
+    "lave_overall": 3.688976377952756,
+    "failed_lave_parse_count": 0.0
+  },
+  {
+    "dataset": "our_test_non_safe",
+    "model": "WAD full-JSON",
+    "n": 254,
+    "bertscore_precision": 0.8528888643257261,
+    "bertscore_recall": 0.8484750385359516,
+    "bertscore_f1": 0.8505860351202056,
+    "lave_hazard": 4.043307086614173,
+    "lave_guide": 2.7716535433070866,
+    "lave_format": 6.019685039370079,
+    "lave_overall": 4.019685039370079,
+    "failed_lave_parse_count": 0.0
+  },
+  {
+    "dataset": "wad_test",
+    "model": "WAD alter-only",
+    "n": 1007,
+    "bertscore_precision": 0.9032451458341907,
+    "bertscore_recall": 0.9011946827794731,
+    "bertscore_f1": 0.9020744878225317,
+    "lave_hazard": 4.5183714001986095,
+    "lave_guide": 4.639523336643496,
+    "lave_format": 7.894736842105263,
+    "lave_overall": 5.516385302879841,
+    "failed_lave_parse_count": 0.0
+  },
+  {
+    "dataset": "wad_test",
+    "model": "WAD full-JSON",
+    "n": 1007,
+    "bertscore_precision": 0.8998488072960711,
+    "bertscore_recall": 0.9000205616610053,
+    "bertscore_f1": 0.8997515457152373,
+    "lave_hazard": 5.28798411122145,
+    "lave_guide": 5.4846077457795435,
+    "lave_format": 8.04865938430983,
+    "lave_overall": 6.147964250248262,
+    "failed_lave_parse_count": 0.0
+  }
+]

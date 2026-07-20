@@ -1,0 +1,60 @@
+{
+  "grouping_basis": "predicted_output",
+  "group_definition": {
+    "safe": "response_text is exactly <SAFE/> after trimming and case normalization",
+    "hazard": "response_text is not <SAFE/>"
+  },
+  "model_label": "Qwen2.5-VL-7B-VR-en",
+  "model_path": "<REMOTE_WORKSPACE_ROOT>/[main]model-final/(VR)Mix-Source/Qwen2.5-VL-7B-VR-en",
+  "hardware_label": "NVIDIA RTX A6000",
+  "precision_label": "auto",
+  "quantization_label": "none",
+  "input_setting_label": null,
+  "dataset_json": "<REMOTE_WORKSPACE_ROOT>/[main]inference/VIP_dataset_R_full_train.json",
+  "images_root": "<REMOTE_WORKSPACE_ROOT>/dataset/images",
+  "source_run_sample_count": 200,
+  "source_ground_truth_sampling": {
+    "safe_count": 100,
+    "hazard_count": 100,
+    "seed": 42
+  },
+  "max_new_tokens": 128,
+  "repeats": 1,
+  "warmup_runs": 3,
+  "peak_gpu_memory_allocated_gb": 16.04801034927368,
+  "peak_gpu_memory_reserved_gb": 16.546875,
+  "groups": {
+    "safe": {
+      "count": 67,
+      "avg_end_to_end_latency_sec": 1.6344429421231652,
+      "std_end_to_end_latency_sec": 0.11962691514564851,
+      "min_end_to_end_latency_sec": 1.4744031399022788,
+      "max_end_to_end_latency_sec": 2.2983728570397943,
+      "p50_end_to_end_latency_sec": 1.60428166994825,
+      "p95_end_to_end_latency_sec": 1.8382180917542428,
+      "avg_generate_only_latency_sec": 1.3607154572591074,
+      "std_generate_only_latency_sec": 0.02138085641920438,
+      "min_generate_only_latency_sec": 1.3427769159898162,
+      "max_generate_only_latency_sec": 1.4767099230084568,
+      "p50_generate_only_latency_sec": 1.3594344439916313,
+      "p95_generate_only_latency_sec": 1.3664964948780836,
+      "avg_generated_tokens": 4.0
+    },
+    "hazard": {
+      "count": 133,
+      "avg_end_to_end_latency_sec": 2.646446359471621,
+      "std_end_to_end_latency_sec": 0.2288946235173927,
+      "min_end_to_end_latency_sec": 2.162187098991126,
+      "max_end_to_end_latency_sec": 3.429068840108812,
+      "p50_end_to_end_latency_sec": 2.606017337180674,
+      "p95_end_to_end_latency_sec": 3.091853634966537,
+      "avg_generate_only_latency_sec": 2.355868982595805,
+      "std_generate_only_latency_sec": 0.17040038948577046,
+      "min_generate_only_latency_sec": 1.9570471560582519,
+      "max_generate_only_latency_sec": 2.7704056610818952,
+      "p50_generate_only_latency_sec": 2.3366692950949073,
+      "p95_generate_only_latency_sec": 2.6567527222912757,
+      "avg_generated_tokens": 41.556390977443606
+    }
+  }
+}

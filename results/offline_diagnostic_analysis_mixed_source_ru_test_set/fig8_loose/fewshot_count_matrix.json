@@ -1,0 +1,35 @@
+{
+  "category_order": [
+    "GROUND",
+    "PIT",
+    "OVERHEAD",
+    "SAFE"
+  ],
+  "counting_unit": "one unit of object-event mass per matched pair, unmatched GT object, unmatched predicted object, or selected unique both-empty record; multi-category events split that unit uniformly across the category Cartesian product",
+  "matrix": [
+    [
+      336.0,
+      0.0,
+      0.0,
+      548.0
+    ],
+    [
+      6.0,
+      27.0,
+      0.0,
+      91.0
+    ],
+    [
+      2.0,
+      0.0,
+      0.0,
+      82.0
+    ],
+    [
+      161.0,
+      8.0,
+      0.0,
+      155.0
+    ]
+  ]
+}

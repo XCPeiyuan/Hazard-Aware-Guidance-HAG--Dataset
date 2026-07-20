@@ -1,0 +1,489 @@
+{
+  "source": "evaluation_results_pre_audit.json",
+  "definitions": {
+    "reporting_status": "Main table reports hazard/category F1, distance MAE, and direction exact/adjacent. Distance-bin and direction-bin F1 are retained for audit only per advisor decision.",
+    "hazard_f1": "Role-aware name-compatible object detection F1: matched required/optional GT is TP; unmatched prediction is FP; only unmatched required GT is FN.",
+    "field_micro_f1": "Correct matched field: TP; wrong matched field: FP+FN; missing matched field: FN; unmatched prediction: FP. FN applies only to required GT; unmatched optional GT is not penalized.",
+    "direction_exact": "Exact / (exact + adjacent + mirror + mismatch).",
+    "direction_adjacent": "(exact + adjacent) / (exact + adjacent + mirror + mismatch)."
+  },
+  "methods": {
+    "zero-shot": {
+      "hazard": {
+        "tp": 78,
+        "fp": 23,
+        "fn": 29,
+        "micro_f1": 0.75
+      },
+      "legacy_hazard_f1_all_active_gt_denominator": 0.5360824742268042,
+      "category": {
+        "tp": 76,
+        "fp": 25,
+        "fn": 31,
+        "per_label": {
+          "GROUND": {
+            "tp": 64,
+            "fp": 25,
+            "fn": 11
+          },
+          "PIT": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 8
+          },
+          "OVERHEAD": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12
+          }
+        },
+        "micro_f1": 0.7307692307692307,
+        "macro_f1_supported_gt": 0.5101626016260162,
+        "per_label_f1": {
+          "GROUND": 0.7804878048780488,
+          "PIT": 0.75,
+          "OVERHEAD": 0.0
+        }
+      },
+      "direction_bin": {
+        "tp": 45,
+        "fp": 55,
+        "fn": 47,
+        "per_label": {
+          "right": {
+            "tp": 0,
+            "fp": 13,
+            "fn": 0
+          },
+          "right_ahead": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 1
+          },
+          "slightly_right_ahead": {
+            "tp": 1,
+            "fp": 1,
+            "fn": 11
+          },
+          "ahead": {
+            "tp": 44,
+            "fp": 32,
+            "fn": 20
+          },
+          "slightly_left_ahead": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 12
+          },
+          "left_ahead": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 3
+          },
+          "left": {
+            "tp": 0,
+            "fp": 8,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.46875,
+        "macro_f1_supported_gt": 0.15428571428571428,
+        "per_label_f1": {
+          "right": 0.0,
+          "right_ahead": 0.0,
+          "slightly_right_ahead": 0.14285714285714285,
+          "ahead": 0.6285714285714286,
+          "slightly_left_ahead": 0.0,
+          "left_ahead": 0.0,
+          "left": 0.0
+        }
+      },
+      "distance_bin_visual_prompt": {
+        "tp": 37,
+        "fp": 28,
+        "fn": 52,
+        "per_label": {
+          "near": {
+            "tp": 37,
+            "fp": 7,
+            "fn": 37
+          },
+          "medium": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 15
+          },
+          "far": {
+            "tp": 0,
+            "fp": 19,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.4805194805194805,
+        "macro_f1_supported_gt": 0.3135593220338983,
+        "per_label_f1": {
+          "near": 0.6271186440677966,
+          "medium": 0.0,
+          "far": 0.0
+        }
+      },
+      "distance_bin_p007_current": {
+        "tp": 26,
+        "fp": 39,
+        "fn": 64,
+        "per_label": {
+          "near": {
+            "tp": 8,
+            "fp": 18,
+            "fn": 17
+          },
+          "medium": {
+            "tp": 9,
+            "fp": 9,
+            "fn": 32
+          },
+          "far": {
+            "tp": 9,
+            "fp": 12,
+            "fn": 15
+          }
+        },
+        "micro_f1": 0.33548387096774196,
+        "macro_f1_supported_gt": 0.3396034119862635,
+        "per_label_f1": {
+          "near": 0.3137254901960784,
+          "medium": 0.3050847457627119,
+          "far": 0.4
+        }
+      },
+      "distance_mae": 3.8363636363636364,
+      "direction_exact": 0.5844155844155844,
+      "direction_adjacent": 0.8571428571428571,
+      "direction_counts": {
+        "exact": 45,
+        "adjacent_only": 21,
+        "mirror": 0,
+        "mismatch": 11,
+        "unavailable": 1
+      }
+    },
+    "few-shot": {
+      "hazard": {
+        "tp": 92,
+        "fp": 34,
+        "fn": 30,
+        "micro_f1": 0.7419354838709677
+      },
+      "legacy_hazard_f1_all_active_gt_denominator": 0.5822784810126582,
+      "category": {
+        "tp": 90,
+        "fp": 35,
+        "fn": 31,
+        "per_label": {
+          "GROUND": {
+            "tp": 77,
+            "fp": 35,
+            "fn": 12
+          },
+          "PIT": {
+            "tp": 13,
+            "fp": 0,
+            "fn": 7
+          },
+          "OVERHEAD": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12
+          }
+        },
+        "micro_f1": 0.7317073170731707,
+        "macro_f1_supported_gt": 0.5180159807025478,
+        "per_label_f1": {
+          "GROUND": 0.7661691542288557,
+          "PIT": 0.7878787878787878,
+          "OVERHEAD": 0.0
+        }
+      },
+      "direction_bin": {
+        "tp": 33,
+        "fp": 81,
+        "fn": 58,
+        "per_label": {
+          "right": {
+            "tp": 0,
+            "fp": 37,
+            "fn": 0
+          },
+          "right_ahead": {
+            "tp": 1,
+            "fp": 12,
+            "fn": 1
+          },
+          "slightly_right_ahead": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 11
+          },
+          "ahead": {
+            "tp": 32,
+            "fp": 21,
+            "fn": 31
+          },
+          "slightly_left_ahead": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12
+          },
+          "left_ahead": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 3
+          },
+          "left": {
+            "tp": 0,
+            "fp": 10,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.32195121951219513,
+        "macro_f1_supported_gt": 0.13701149425287357,
+        "per_label_f1": {
+          "right": 0.0,
+          "right_ahead": 0.13333333333333333,
+          "slightly_right_ahead": 0.0,
+          "ahead": 0.5517241379310345,
+          "slightly_left_ahead": 0.0,
+          "left_ahead": 0.0,
+          "left": 0.0
+        }
+      },
+      "distance_bin_visual_prompt": {
+        "tp": 68,
+        "fp": 42,
+        "fn": 40,
+        "per_label": {
+          "near": {
+            "tp": 61,
+            "fp": 33,
+            "fn": 26
+          },
+          "medium": {
+            "tp": 7,
+            "fp": 9,
+            "fn": 14
+          },
+          "far": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.6238532110091743,
+        "macro_f1_supported_gt": 0.5262057637748245,
+        "per_label_f1": {
+          "near": 0.6740331491712708,
+          "medium": 0.3783783783783784,
+          "far": 0.0
+        }
+      },
+      "distance_bin_p007_current": {
+        "tp": 27,
+        "fp": 83,
+        "fn": 69,
+        "per_label": {
+          "near": {
+            "tp": 17,
+            "fp": 70,
+            "fn": 13
+          },
+          "medium": {
+            "tp": 2,
+            "fp": 5,
+            "fn": 39
+          },
+          "far": {
+            "tp": 8,
+            "fp": 8,
+            "fn": 17
+          }
+        },
+        "micro_f1": 0.2621359223300971,
+        "macro_f1_supported_gt": 0.2547251754568828,
+        "per_label_f1": {
+          "near": 0.2905982905982906,
+          "medium": 0.08333333333333333,
+          "far": 0.3902439024390244
+        }
+      },
+      "distance_mae": 2.475,
+      "direction_exact": 0.39759036144578314,
+      "direction_adjacent": 0.5783132530120482,
+      "direction_counts": {
+        "exact": 33,
+        "adjacent_only": 15,
+        "mirror": 0,
+        "mismatch": 35,
+        "unavailable": 9
+      }
+    },
+    "ours": {
+      "hazard": {
+        "tp": 96,
+        "fp": 30,
+        "fn": 27,
+        "micro_f1": 0.7710843373493976
+      },
+      "legacy_hazard_f1_all_active_gt_denominator": 0.6075949367088607,
+      "category": {
+        "tp": 94,
+        "fp": 31,
+        "fn": 28,
+        "per_label": {
+          "GROUND": {
+            "tp": 78,
+            "fp": 27,
+            "fn": 11
+          },
+          "PIT": {
+            "tp": 14,
+            "fp": 2,
+            "fn": 7
+          },
+          "OVERHEAD": {
+            "tp": 2,
+            "fp": 2,
+            "fn": 10
+          }
+        },
+        "micro_f1": 0.7611336032388664,
+        "macro_f1_supported_gt": 0.6036268226989877,
+        "per_label_f1": {
+          "GROUND": 0.8041237113402062,
+          "PIT": 0.7567567567567568,
+          "OVERHEAD": 0.25
+        }
+      },
+      "direction_bin": {
+        "tp": 37,
+        "fp": 66,
+        "fn": 55,
+        "per_label": {
+          "right": {
+            "tp": 0,
+            "fp": 8,
+            "fn": 0
+          },
+          "right_ahead": {
+            "tp": 1,
+            "fp": 14,
+            "fn": 1
+          },
+          "slightly_right_ahead": {
+            "tp": 0,
+            "fp": 6,
+            "fn": 11
+          },
+          "ahead": {
+            "tp": 31,
+            "fp": 23,
+            "fn": 31
+          },
+          "slightly_left_ahead": {
+            "tp": 1,
+            "fp": 2,
+            "fn": 11
+          },
+          "left_ahead": {
+            "tp": 4,
+            "fp": 12,
+            "fn": 1
+          },
+          "left": {
+            "tp": 0,
+            "fp": 1,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.37948717948717947,
+        "macro_f1_supported_gt": 0.23328310634598665,
+        "per_label_f1": {
+          "right": 0.0,
+          "right_ahead": 0.11764705882352941,
+          "slightly_right_ahead": 0.0,
+          "ahead": 0.5344827586206896,
+          "slightly_left_ahead": 0.13333333333333333,
+          "left_ahead": 0.38095238095238093,
+          "left": 0.0
+        }
+      },
+      "distance_bin_visual_prompt": {
+        "tp": 78,
+        "fp": 36,
+        "fn": 32,
+        "per_label": {
+          "near": {
+            "tp": 71,
+            "fp": 26,
+            "fn": 21
+          },
+          "medium": {
+            "tp": 7,
+            "fp": 8,
+            "fn": 11
+          },
+          "far": {
+            "tp": 0,
+            "fp": 2,
+            "fn": 0
+          }
+        },
+        "micro_f1": 0.6964285714285714,
+        "macro_f1_supported_gt": 0.5877825877825877,
+        "per_label_f1": {
+          "near": 0.7513227513227513,
+          "medium": 0.42424242424242425,
+          "far": 0.0
+        }
+      },
+      "distance_bin_p007_current": {
+        "tp": 57,
+        "fp": 57,
+        "fn": 45,
+        "per_label": {
+          "near": {
+            "tp": 16,
+            "fp": 21,
+            "fn": 12
+          },
+          "medium": {
+            "tp": 30,
+            "fp": 23,
+            "fn": 22
+          },
+          "far": {
+            "tp": 11,
+            "fp": 13,
+            "fn": 11
+          }
+        },
+        "micro_f1": 0.5277777777777778,
+        "macro_f1_supported_gt": 0.513999044433827,
+        "per_label_f1": {
+          "near": 0.49230769230769234,
+          "medium": 0.5714285714285714,
+          "far": 0.4782608695652174
+        }
+      },
+      "distance_mae": 1.367816091954023,
+      "direction_exact": 0.4805194805194805,
+      "direction_adjacent": 0.8571428571428571,
+      "direction_counts": {
+        "exact": 37,
+        "adjacent_only": 29,
+        "mirror": 0,
+        "mismatch": 11,
+        "unavailable": 19
+      }
+    }
+  }
+}

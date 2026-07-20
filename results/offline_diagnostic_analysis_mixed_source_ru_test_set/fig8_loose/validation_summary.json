@@ -1,0 +1,63 @@
+{
+  "all_api_failures_explicit": true,
+  "cross_method_detection_disagreements": 408,
+  "duplicate_record_positions_removed": 169,
+  "expected_records": 863,
+  "expected_unique_images": 694,
+  "input_hashes_after": {
+    "config": "bfb2fe37abbad0e86c3a17f6568533b7f7554862e794928edeaeef41208e3261",
+    "fewshot": "b6aeaee0500279baca101461f44b193b6171ae6c2e8cc9420dd1219a5a14f9ee",
+    "gt": "000e0d5465c412d111b96817e3c087ef5772e2bb945db275bed2686a28a97786",
+    "ours": "af4542d6f73c20564eb653ce3952aa451dc1963c5456a67b581d02d44d72cc5e"
+  },
+  "input_hashes_before": {
+    "config": "bfb2fe37abbad0e86c3a17f6568533b7f7554862e794928edeaeef41208e3261",
+    "fewshot": "b6aeaee0500279baca101461f44b193b6171ae6c2e8cc9420dd1219a5a14f9ee",
+    "gt": "000e0d5465c412d111b96817e3c087ef5772e2bb945db275bed2686a28a97786",
+    "ours": "af4542d6f73c20564eb653ce3952aa451dc1963c5456a67b581d02d44d72cc5e"
+  },
+  "input_hashes_unchanged": true,
+  "match_mode": "loose",
+  "methods": {
+    "fewshot": {
+      "actual_category_confusion_mass": 8.0,
+      "deepseek_api_failures": 0,
+      "matrix_sum_traceable": true,
+      "one_to_one_validated": true
+    },
+    "ours": {
+      "actual_category_confusion_mass": 17.0,
+      "deepseek_api_failures": 0,
+      "matrix_sum_traceable": true,
+      "one_to_one_validated": true
+    }
+  },
+  "position_and_image_alignment_validated": true,
+  "raw_records_per_source": 863,
+  "records_per_source": 694,
+  "safe_safe_counts": {
+    "description": "Selected unique-image records where both GT and prediction have zero hazard objects; each contributes one SAFE/SAFE matrix event",
+    "safe_safe_count": {
+      "fewshot": 155,
+      "ours": 146
+    },
+    "total_records": 694
+  },
+  "shared_validation": {
+    "no_match_prompt_leak": {
+      "details": {
+        "forbidden_tokens": []
+      },
+      "passed": true
+    }
+  },
+  "total_api_failures": 0,
+  "unique_image_selection": {
+    "duplicate_image_groups": 169,
+    "hazard_preferred_groups": 0,
+    "input_records": 863,
+    "mixed_safe_hazard_duplicate_groups": 3,
+    "removed_duplicate_positions": 169,
+    "selected_unique_images": 694
+  }
+}
