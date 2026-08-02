@@ -4,6 +4,8 @@ This repository is the planned release page for the dataset and code package ass
 
 **MLLM-Assisted Dataset Construction for Hazard-Aware Guidance for Individuals with Visual Impairments**
 
+![](Images/Fig_1b.png)
+
 ## Associated Hugging Face Releases
 
 - **Model weights:** [HAG-Qwen2.5-VL-7B-RU](https://huggingface.co/xcyuan/HAG-Qwen2.5-VL-7B-RU)
