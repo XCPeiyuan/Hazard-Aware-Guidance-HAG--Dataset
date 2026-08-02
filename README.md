@@ -4,7 +4,7 @@ This repository is the planned release page for the dataset and code package ass
 
 **MLLM-Assisted Dataset Construction for Hazard-Aware Guidance for Individuals with Visual Impairments**
 
-![.](Images/Fig_1b.png)
+![.](Images/Fig1b.png)
 
 ## Associated Hugging Face Releases
 
