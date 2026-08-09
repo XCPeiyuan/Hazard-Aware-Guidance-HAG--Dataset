@@ -1,0 +1,12 @@
+# Runtime dependencies tested by the original single-thread implementation.
+torch==2.11.0
+torchvision==0.26.0
+transformers==5.10.2
+numpy==1.26.4
+Pillow==12.2.0
+# OpenCV 4.12+ requires NumPy 2 on recent Python releases; keep the tested pair.
+opencv-python==4.11.0.86
+scipy==1.13.1
+PyYAML==6.0.3
+pydantic==2.12.5
+openai==2.30.0
