@@ -14,4 +14,3 @@ paths, prompts, model settings, and output conventions.
 | `PRO_build_type_confusion_heatmap.py` | Earlier LLM-assisted object matching and category heatmap. | `../offline_diagnostic_analysis_mixed_source_ru_test_set/fig8_rerun/` |
 | `PRO_build_type_confusion_heatmap_number.py` | Earlier category heatmap variant with count labels. | `../offline_diagnostic_analysis_mixed_source_ru_test_set/fig8_rerun/` |
 | `inference_txt_based-WalkVLM-ourset.py` | Runs a local WalkVLM checkpoint on the project test format. | `../compatibility_aware_walking_awareness_dataset_comparison/` |
-

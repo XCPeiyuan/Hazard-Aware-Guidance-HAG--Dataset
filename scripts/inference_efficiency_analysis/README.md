@@ -1,15 +1,8 @@
-# Inference Efficiency Analysis Latency Benchmarks
+# Earlier Inference-efficiency Scripts
 
-This directory contains lightweight scripts for server-side and mobile-localhost
-latency checks.
+- `run_server_latency_benchmark.py`: earlier workstation latency benchmark.
+- `mobile_localhost_inference_efficiency_template.py`: localhost inference timing template.
 
-## Contents
+These scripts are retained as earlier implementations. Their defaults and associated result files do not represent the revised repeated benchmark. See [repeated_workstation_latency](../repeated_workstation_latency/README.md) for the additional experiment.
 
-- `run_server_latency_benchmark.py`: helper for server latency benchmarking.
-- `Inference Efficiency Analysis_mobile_localhost_template.py`: template for localhost mobile testing.
-
-## Public-Release Notes
-
-The scripts are small enough for GitHub and do not include raw data. Runtime
-targets, endpoints, and local paths should be supplied locally and kept out of
-version control.
+Configure model, data, and endpoint paths before use. The mobile script is a template, not evidence of validated mobile deployment.

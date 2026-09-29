@@ -1,16 +1,9 @@
-# Structured-field Evaluation on an Independently Annotated Subset Structured Evaluation
+# Independently Annotated Structured-field Evaluation
 
-This directory contains the public candidate code for structured-field
-evaluation and the local annotation-tool workflow.
+This directory contains a Flask-based annotation tool under `annotation_tool/` and the helper `evaluation/recalculate_field_f1.py`.
 
-## Contents
+The helper recalculates field scores from existing matched evaluation records; it is not an image-to-prediction pipeline. Configure its input and output paths before running it. Images and full annotation workspaces are not included.
 
-- `annotation_tool/`: Flask-based annotation tool and tests.
-- `evaluation/recalculate_field_f1.py`: structured-field F1 recalculation
-  helper.
+Selected summaries are in `../../results/structured_field_evaluation_independently_annotated_subset/`. Their `pre_audit` filenames identify the stored evaluation snapshot.
 
-## Public-Release Notes
-
-The staged result files in `../../results/structured_field_evaluation_independently_annotated_subset/` are the pre-audit summaries
-kept separate from any later annotation-tool audit work. Raw images, private
-annotation workspaces, and reviewer-only files are not included.
+The additional check of automatic step estimates against manual references is documented separately in [automatic_step_distance_check](../automatic_step_distance_check/README.md).

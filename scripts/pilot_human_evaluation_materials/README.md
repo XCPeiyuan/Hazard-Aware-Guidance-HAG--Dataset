@@ -5,6 +5,4 @@ files and their corresponding images. It copies each matched image and writes
 the two associated outputs into a per-image review bundle.
 
 This is a material-preparation utility, not a scoring or statistical-analysis
-tool. The script is preserved without source changes. Do not commit the
-generated review folders when they contain restricted, third-party, or
-consent-sensitive images.
+tool. The script is retained as experiment scripts. The generated folders contain copies of the supplied images and text.

@@ -1,18 +1,8 @@
-# Offline Diagnostic Analysis on the Mixed-source R+U Test Set Distance Analysis
+# Mixed-source R+U Diagnostic Analysis
 
-This directory contains the strongest current public-release candidate code from
-the new experiments.
+- `distance_analysis/`: object matching, distance-bin recall, reporting, and validation.
+- `fig8_rerun/`: object-level category accounting matrices.
 
-## Contents
+These analyses concern the mixed-source R+U test set. They are separate from the WAD structured comparison and the independently annotated evaluation subset.
 
-- `distance_analysis/`: distance-aware validation, matching, metrics, reporting,
-  and tests.
-- `fig8_rerun/`: Fig. 8 rerun helper and test.
-
-## Public-Release Notes
-
-Private LLM configuration files are not included. Use
-`../../configs/llm_config.example.json` as a template if an LLM-backed matcher is
-needed.
-
-Result summaries are staged under `../../results/offline_diagnostic_analysis_mixed_source_ru_test_set/`.
+Reviewed input JSON files and LLM credentials must be supplied separately. Read the component README files for the expected layout. Aggregate results are under `../../results/offline_diagnostic_analysis_mixed_source_ru_test_set/`.

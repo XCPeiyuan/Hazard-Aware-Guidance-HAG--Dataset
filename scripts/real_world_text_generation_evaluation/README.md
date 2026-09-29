@@ -2,7 +2,7 @@
 
 This directory contains the original scripts used to generate and evaluate
 hazard-aware text outputs on the Real-world test workflow. The scripts are
-preserved without source changes.
+retained as experiment scripts.
 
 | Script | Role |
 | --- | --- |
@@ -19,7 +19,7 @@ behavior. The scripts intentionally retain the historical local paths, model
 identifiers, GPU settings, prompts, and output conventions. Dataset files,
 model weights, generated outputs, and private credentials are not included.
 
-For the major-revision WAD comparison, use
+For the WAD training and text-metric comparison, use
 `../compatibility_aware_walking_awareness_dataset_comparison/`. For the later
 structured-field and object-level diagnostic analyses, use their dedicated
 directories under `../`.

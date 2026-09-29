@@ -8,7 +8,11 @@ configuration files that are not included in this repository.
 | Directory | Scope |
 | --- | --- |
 | `annotation_output_parser/` | Parsing utilities for structured annotation outputs. |
-| `annotation_pipeline/` | Annotation-pipeline code and supporting utilities. |
+| `annotation_pipeline/` | Annotation-generation script. |
+| `real-world-ssi-reconstruction/` | Current YOLO-to-SSI utility; see its README for differences from the experimental implementation. |
+| `wad_structured_comparison/` | Additional WAD structured-field scoring and extraction components. |
+| `automatic_step_distance_check/` | Fixed-mapping automatic step-distance check. |
+| `repeated_workstation_latency/` | Repeated 3B/7B latency measurement and analysis components. |
 | `compatibility_aware_walking_awareness_dataset_comparison/` | Compatibility-aware comparison materials for the Walking Awareness Dataset setting. |
 | `dataset_distribution_and_preprocessing/` | Dataset distribution analysis and preprocessing materials. |
 | `inference_efficiency_analysis/` | Inference-efficiency analysis materials. |
@@ -19,6 +23,4 @@ configuration files that are not included in this repository.
 | `structured_field_evaluation_independently_annotated_subset/` | Structured-field evaluation materials for an independently annotated subset. |
 
 For inputs, dependencies, configuration, and interpretation of results, read
-the README in the relevant subdirectory before using any script. Do not commit
-raw data, credentials, local configuration files, caches, model weights, or
-generated outputs.
+the README in the relevant subdirectory before using any script. Dataset and model assets must be supplied separately.

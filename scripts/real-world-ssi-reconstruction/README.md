@@ -4,7 +4,7 @@ English | [简体中文](README_zh-CN.md)
 
 A single-thread pipeline that converts real-world street-scene RGB images and YOLO annotations into Structured Scene Information (SSI). It combines Grounding DINO, SAM2, Depth Anything V2, SegFormer, and MiniMax M3 to produce per-image SSI JSON, depth maps, masks, review overlays, and quality-control records.
 
-This repository contains only reproducible source code and Windows launch scripts. It does not include datasets, model weights, API keys, caches, generated outputs, or test material.
+This directory contains source code and Windows launch scripts. Dataset files and model weights must be supplied or downloaded separately.
 
 ## Pipeline
 
@@ -18,19 +18,11 @@ This repository contains only reproducible source code and Windows launch script
 
 Images are processed sequentially. Local vision inference can use the GPU, but this version never processes multiple images at the same time. MiniMax requests are also sent one image at a time. This design favors stable recovery and auditable results during long batch runs.
 
-## Why gpt-o4-mini Was Replaced with MiniMax M3
+## Implementation scope
 
-Early versions of the project used OpenAI `gpt-o4-mini` for the classification stage. The current open-source release replaces that stage with `MiniMax-M3`; the local vision pipeline and SSI data contract remain unchanged.
+This utility currently configures `MiniMax-M3` for category assignment. It is a maintained implementation, not an exact snapshot of the model services and settings used in the manuscript experiments. Confirm that your configured endpoint supports the required image inputs.
 
-This was a project-specific engineering decision:
-
-- The classifier must jointly interpret the original RGB image and a generated overlay containing obstacle IDs, masks, and distance information. The MiniMax M3 deployment used for this project handled that two-image classification workflow.
-- M3 output is accepted only after strict JSON validation. Every input obstacle ID must map to exactly one of four categories: `Common Obstacle`, `Pitfall Hazard`, `Upper-body Hazard`, or `Other`.
-- Adaptive thinking is enabled with `{"thinking": {"type": "adaptive"}}` for scenes that require spatial reasoning or contain ambiguous obstacle boundaries.
-- MiniMax is called through an OpenAI-SDK-compatible interface, so replacing the classifier did not require changes to caching, quality filtering, or SSI export.
-- Under the service availability and quota constraints of this project, MiniMax M3 was more practical for sustained long-batch execution.
-
-This migration is not a claim that MiniMax M3 is universally better than OpenAI models. Model availability, endpoint behavior, and subscription features can change. Check the [MiniMax OpenAI-compatible API documentation](https://platform.minimax.io/docs/api-reference/text-openai-api) and confirm that your account supports `MiniMax-M3` with image input.
+For the fixed automatic-distance experiment, use [automatic_step_distance_check](../automatic_step_distance_check/README.md), which retains the implementation used for that check.
 
 ## Requirements
 
@@ -50,7 +42,7 @@ Runtime versions are pinned in `requirements.txt`. The first run downloads these
 
 ## Installation
 
-After cloning the repository, double-click:
+From this directory, run:
 
 ```text
 setup_windows.bat
@@ -90,7 +82,7 @@ Edit `config.json`:
 }
 ```
 
-`config.json` is excluded by `.gitignore`. Never commit a real API key. The pipeline does not write the API key to SSI files, QC records, caches, or batch reports.
+Keep `config.json` private; it contains your API credentials.
 
 ## Input Dataset Format
 
@@ -226,7 +218,7 @@ A sample is marked with `near_artifact` only when all four conditions are true:
 3. The largest four-connected component contains at least `80%` of all extreme-near pixels.
 4. RGB-edge and depth-edge correlation is below `0.20`.
 
-The first three conditions identify a small, highly concentrated near-field candidate. The fourth condition checks whether that depth structure lacks matching RGB-edge support. This conservative rule reduces false positives on legitimate near-field objects.
+The first three conditions identify a small, highly concentrated near-field candidate. The fourth condition checks whether that depth structure lacks matching RGB-edge support. The fourth condition requires evidence of disagreement between RGB and depth edges.
 
 All thresholds are centralized in `config.py`. If you change the experimental protocol, use a new output directory to avoid mixing results with caches created under older settings.
 
@@ -247,6 +239,8 @@ output-root/
 ```
 
 Failed or filtered images do not keep a formal SSI file, but they retain QC records and reason codes for auditing.
+
+The `run_pipeline.py` entry point enables bounding-box mask fallback by default, overriding the base configuration. Pass `--no-allow-bbox-fallback` to disable it. Fallback behavior must be kept consistent when comparing runs.
 
 ## Main Configuration
 
