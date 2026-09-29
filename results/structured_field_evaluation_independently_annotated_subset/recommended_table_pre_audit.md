@@ -1,4 +1,4 @@
-# Structured-field Evaluation on an Independently Annotated Subset 建议主表：冻结 GT / pre-audit 结果
+# Structured-field Evaluation on an Independently Annotated Subset 结构化评估汇总（pre-audit 文件快照）
 
 > **当前状态：论文主结果。** 后续使用前先阅读
 > `[main]Structured-field Evaluation on an Independently Annotated Subset_current_decision_and_file_map.md`。本文件不使用查看模型结果后产生的
@@ -20,8 +20,7 @@
 - `Hazard F1` 是名称兼容匹配产生的 role-aware 障碍物检测 micro-F1。
 - `Category F1` 为 detection-aware micro-F1：正确字段记 TP；required GT 的错误字段记 FP+FN；required GT 的字段缺失记 FN；未匹配预测记 FP；未匹配 required GT 记 FN。
 - 上述 FN 只适用于 `required` GT；未匹配 `optional` GT 不扣分。匹配成功的 `optional` GT 可以贡献 TP。
-- 根据老师意见，`Distance-bin F1` 和 `Direction-bin F1` 不进入论文主表。距离使用更直接的 `Dist. MAE`；方向使用 `Dir. Adjacent` 和 `Dir. Exact`。
-- 这些保留指标仍基于结构化字段，不依赖 ALERT/GUIDE 的表面措辞，因此仍可用于回应 reviewer 对 surface-form bias 的核心担忧。
+- `Distance-bin F1` 和 `Direction-bin F1` 不进入论文主表。距离使用更直接的 `Dist. MAE`；方向使用 `Dir. Adjacent` 和 `Dir. Exact`。
 - `Dir. Exact = exact / (exact + adjacent + mirror + mismatch)`。
 - `Dir. Adjacent = (exact + adjacent) / (exact + adjacent + mirror + mismatch)`；该列含 exact，不是 adjacent-only。
 - `not_mentioned` 和 `uncertain` 不进入 Dir. Exact/Adjacent 的分母，但在 detection-aware Direction-bin F1 中作为字段缺失受到惩罚。
