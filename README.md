@@ -9,7 +9,7 @@ The study combines real-world outdoor images and Unity-based synthetic images to
 ## Resources
 
 - [HAG-Qwen2.5-VL-7B-RU model and LoRA adapter](https://huggingface.co/xcyuan/HAG-Qwen2.5-VL-7B-RU)
-- [Planned dataset release](https://huggingface.co/datasets/xcyuan/Hazard-Aware-Guidance-HAG_Dataset)
+- (Coming soon) [Planned dataset release](https://huggingface.co/datasets/xcyuan/Hazard-Aware-Guidance-HAG_Dataset)
 - Reserved identifier for the planned data release: `10.5281/zenodo.22844198`.
 
 Code is provided here; model weights are hosted separately. The dataset package is planned for release after acceptance, subject to licensing and privacy constraints. Planned materials include Unity images and annotations, structured annotations, reviewed evaluation labels, and the 200 author-curated expert-derived exemplar annotations. Third-party real-world images will not be redistributed.
