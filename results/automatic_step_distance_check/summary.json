@@ -1,0 +1,89 @@
+{
+  "images_attempted": 77,
+  "all_non_ignore": {
+    "eligible_objects": 190,
+    "successful_objects": 149,
+    "failed_objects": 41,
+    "images_eligible": 77,
+    "images_successful": 75,
+    "mae": 1.342281879194631,
+    "rmse": 1.842816636120484,
+    "bias": 0.12080536912751678,
+    "median_absolute_error": 1.0,
+    "within_one_step": 0.6644295302013423
+  },
+  "required": {
+    "eligible_objects": 80,
+    "successful_objects": 63,
+    "failed_objects": 17,
+    "images_eligible": 77,
+    "images_successful": 60,
+    "mae": 1.5396825396825398,
+    "rmse": 2.1712405933672376,
+    "bias": 0.42857142857142855,
+    "median_absolute_error": 1.0,
+    "within_one_step": 0.6031746031746031
+  },
+  "optional": {
+    "eligible_objects": 110,
+    "successful_objects": 86,
+    "failed_objects": 24,
+    "images_eligible": 67,
+    "images_successful": 56,
+    "mae": 1.197674418604651,
+    "rmse": 1.558920318085416,
+    "bias": -0.10465116279069768,
+    "median_absolute_error": 1.0,
+    "within_one_step": 0.7093023255813954
+  },
+  "ignored_not_in_primary": {
+    "eligible_objects": 16,
+    "successful_objects": 15,
+    "failed_objects": 1,
+    "images_eligible": 16,
+    "images_successful": 15,
+    "mae": 1.4,
+    "rmse": 2.04939015319192,
+    "bias": 0.2,
+    "median_absolute_error": 1.0,
+    "within_one_step": 0.6666666666666666
+  },
+  "by_category": {
+    "GROUND": {
+      "eligible_objects": 151,
+      "successful_objects": 125,
+      "failed_objects": 26,
+      "images_eligible": 75,
+      "images_successful": 69,
+      "mae": 1.24,
+      "rmse": 1.5773395322504282,
+      "bias": -0.072,
+      "median_absolute_error": 1.0,
+      "within_one_step": 0.672
+    },
+    "PIT": {
+      "eligible_objects": 23,
+      "successful_objects": 11,
+      "failed_objects": 12,
+      "images_eligible": 23,
+      "images_successful": 11,
+      "mae": 1.1818181818181819,
+      "rmse": 2.3159525823376357,
+      "bias": 0.2727272727272727,
+      "median_absolute_error": 0.0,
+      "within_one_step": 0.7272727272727273
+    },
+    "OVERHEAD": {
+      "eligible_objects": 16,
+      "successful_objects": 13,
+      "failed_objects": 3,
+      "images_eligible": 14,
+      "images_successful": 12,
+      "mae": 2.4615384615384617,
+      "rmse": 3.2344301602505596,
+      "bias": 1.8461538461538463,
+      "median_absolute_error": 1.0,
+      "within_one_step": 0.5384615384615384
+    }
+  }
+}
