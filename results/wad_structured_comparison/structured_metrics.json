@@ -1,0 +1,105 @@
+{
+  "matching": "word-boundary name compatibility; one-to-one assignment",
+  "datasets": {
+    "Real-world": {
+      "coverage": {
+        "hazard": {
+          "target_count": 254,
+          "included_count": 254,
+          "excluded_count": 0,
+          "coverage": 1.0
+        },
+        "category": {
+          "target_count": 254,
+          "included_count": 254,
+          "excluded_count": 0,
+          "coverage": 1.0
+        }
+      },
+      "models": {
+        "R+U fine-tuned": {
+          "hazard": {
+            "tp": 272,
+            "fp": 94,
+            "fn": 207,
+            "f1": 0.6437869822485207,
+            "defined": true
+          },
+          "category": {
+            "tp": 266,
+            "fp": 100,
+            "fn": 213,
+            "f1": 0.6295857988165681,
+            "defined": true
+          }
+        },
+        "WAD alter-only": {
+          "hazard": {
+            "tp": 108,
+            "fp": 151,
+            "fn": 371,
+            "f1": 0.2926829268292683,
+            "defined": true
+          },
+          "category": {
+            "tp": 104,
+            "fp": 150,
+            "fn": 375,
+            "f1": 0.2837653478854025,
+            "defined": true
+          }
+        }
+      }
+    },
+    "WAD": {
+      "coverage": {
+        "hazard": {
+          "target_count": 1007,
+          "included_count": 1007,
+          "excluded_count": 0,
+          "coverage": 1.0
+        },
+        "category": {
+          "target_count": 1007,
+          "included_count": 961,
+          "excluded_count": 46,
+          "coverage": 0.9543197616683218
+        }
+      },
+      "models": {
+        "R+U fine-tuned": {
+          "hazard": {
+            "tp": 169,
+            "fp": 716,
+            "fn": 980,
+            "f1": 0.16617502458210423,
+            "defined": true
+          },
+          "category": {
+            "tp": 164,
+            "fp": 665,
+            "fn": 923,
+            "f1": 0.17118997912317327,
+            "defined": true
+          }
+        },
+        "WAD alter-only": {
+          "hazard": {
+            "tp": 272,
+            "fp": 727,
+            "fn": 877,
+            "f1": 0.2532588454376164,
+            "defined": true
+          },
+          "category": {
+            "tp": 266,
+            "fp": 615,
+            "fn": 821,
+            "f1": 0.2703252032520325,
+            "defined": true
+          }
+        }
+      }
+    }
+  }
+}

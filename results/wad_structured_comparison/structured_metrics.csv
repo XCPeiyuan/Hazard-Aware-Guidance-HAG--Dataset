@@ -1,0 +1,9 @@
+dataset,model,metric,images,tp,fp,fn,f1,defined
+Real-world,R+U fine-tuned,hazard,254,272,94,207,0.6437869822485207,True
+Real-world,R+U fine-tuned,category,254,266,100,213,0.6295857988165681,True
+Real-world,WAD alter-only,hazard,254,108,151,371,0.2926829268292683,True
+Real-world,WAD alter-only,category,254,104,150,375,0.2837653478854025,True
+WAD,R+U fine-tuned,hazard,1007,169,716,980,0.16617502458210423,True
+WAD,R+U fine-tuned,category,961,164,665,923,0.17118997912317327,True
+WAD,WAD alter-only,hazard,1007,272,727,877,0.2532588454376164,True
+WAD,WAD alter-only,category,961,266,615,821,0.2703252032520325,True
