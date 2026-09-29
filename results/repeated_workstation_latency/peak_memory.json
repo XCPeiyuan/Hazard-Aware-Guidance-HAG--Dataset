@@ -1,0 +1,18 @@
+{
+  "3b_replica_1": {
+    "model": "3b",
+    "peak_memory_allocated_gib": 7.531766414642334
+  },
+  "3b_replica_2": {
+    "model": "3b",
+    "peak_memory_allocated_gib": 7.531766414642334
+  },
+  "7b_replica_1": {
+    "model": "7b",
+    "peak_memory_allocated_gib": 16.045812129974365
+  },
+  "7b_replica_2": {
+    "model": "7b",
+    "peak_memory_allocated_gib": 16.045812129974365
+  }
+}
