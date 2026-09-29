@@ -1,6 +1,6 @@
 # Unity-Based Structured Scene Information Capture
 
-This directory contains the Unity helper script used to export image--Structured
+This directory contains a Unity helper script for exporting image--Structured
 Scene Information (SSI) pairs from synthetic street scenes.
 
 The script corresponds to the Unity-based source described in the paper section
@@ -10,7 +10,7 @@ The script corresponds to the Unity-based source described in the paper section
 ## Included Script
 
 - `CameraCaptureAnnotator.cs`: captures rendered camera images and exports
-  per-image JSON metadata for visible hazard objects.
+  per-image JSON metadata for selected scene objects.
 
 Important Unity note: the public class in the current script is
 `CameraCaptureAndGT`. In Unity, a `MonoBehaviour` script is easiest to attach

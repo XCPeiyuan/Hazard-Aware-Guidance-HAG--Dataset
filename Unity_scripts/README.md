@@ -4,6 +4,8 @@ This directory contains Unity helper scripts used in the synthetic-data preparat
 
 ## Contents
 
+- `Animation`: object movement, waypoint-based vehicle motion, and wheel rotation.
+
 - `CameraCaptureAnnotator`: exports rendered images and Structured Scene Information (SSI) from configured Unity scenes.
 - `Unity_ConstructionPitGeneratorPlugin`: generates configurable simulated construction-pit geometry.
 - `Unity_ManholeGeneratorPlugin`: generates configurable simulated manholes and open-manhole scenarios.

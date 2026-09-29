@@ -1,6 +1,6 @@
 # Procedural Construction Pit Generator for Unity
 
-This folder is a drop-in Unity plugin for generating reproducible randomized construction pit hazards for simulation dataset collection.
+This folder is a drop-in Unity plugin for generating seed-controlled construction pit geometry for simulation dataset collection.
 
 ## Install
 
@@ -16,7 +16,7 @@ Or create an empty GameObject and add the `ProceduralConstructionPit` component.
 
 ## Seed-Based Generation
 
-`Generation Seed` is the numeric control string for reproducible variation. The same seed and the same parameter ranges generate the same pit. Change the seed to get a different pit.
+`Generation Seed` is the integer for reproducible variation. Keep the seed and generation settings fixed to repeat a generated variant. Change the seed to get a different pit.
 
 The seed does not encode every parameter manually. Use Inspector ranges to control the family of shapes:
 

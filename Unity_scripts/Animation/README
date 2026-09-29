@@ -1,1 +1,7 @@
-Animation
+# Scene Animation Helpers
+
+- `LoopMoveByPosition.cs`: moves an object from a start position to an end position, then resets it to the start.
+- `WaypointVehicleMover.cs`: moves a vehicle along waypoints, with curved turns and optional front-wheel steering pivots.
+- `WheelRotator.cs`: rotates wheels at a fixed speed or according to the parent object's movement.
+
+Attach each component to the relevant Unity object and assign its Inspector fields. These scripts animate scene objects; they do not capture images or export annotations.

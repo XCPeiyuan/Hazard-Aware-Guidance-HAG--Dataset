@@ -1,6 +1,6 @@
 # Replace With Your Materials
 
-Put real scanned materials, AI-generated textures, or Unity material assets here.
+Place your Unity material assets here.
 
 Recommended slots:
 
