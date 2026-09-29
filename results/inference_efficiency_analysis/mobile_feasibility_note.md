@@ -23,4 +23,3 @@ Supplementary positioning note for paper writing:
 - The mobile prototype uses a separately fine-tuned `Qwen3VL-2B` model because the manuscript-side `Qwen2.5-VL-3B` model was not stable in the current MNN Chat deployment environment and the available `Qwen2.5` mobile path was not usable for a clean end-to-end prototype run.
 - Therefore, the latency and memory numbers in this folder may be cited only as supplementary engineering evidence that a phone-side prototype path is feasible under the present toolchain.
 - These numbers must not be presented as direct on-device latency evidence for the manuscript's primary `Qwen2.5-VL-3B` or `Qwen2.5-VL-7B` models.
-- In the reviewer response, the formal deployment evidence should still be the workstation-side latency/memory table for `Qwen2.5-VL-3B/7B`, while this mobile note can be used only to explain practical deployment constraints and future mobile optimization work.
