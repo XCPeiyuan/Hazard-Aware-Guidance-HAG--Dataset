@@ -9,17 +9,17 @@ The runtime supports Python 3.11 or later and uses only the Python standard
 library. It does not require an API, model, dataset, network connection, or
 third-party runtime package.
 
-## Provenance and release boundary
+## Scope
 
 This standalone utility refactors and extends the simple `ALERT`/`GUIDE`
 extraction logic that was originally embedded in an automatic annotation
-workflow into an open-source parser. 
+workflow into a standalone parser. 
 
 The parser assumes that the caller already has one model-generated output
 string using the English `ALERT`/`GUIDE` schema or an explicit `SAFE` form. It
 only parses that string; it does not generate an annotation.
 
-This release does not include and does not replace the complete annotation
+This utility does not include or replace the complete annotation
 pipeline, VP generation, SSI production, an API client, any model or model
 weights, or any dataset.
 
@@ -131,4 +131,3 @@ python -B `
 It prints `alert`, `guide`, and `hazard`. This is a demonstration, not a CLI:
 it has no argument interface and performs no file I/O, API/model call, dataset
 access, or network access.
-
