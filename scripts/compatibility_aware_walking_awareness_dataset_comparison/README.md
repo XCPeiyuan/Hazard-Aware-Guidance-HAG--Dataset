@@ -1,21 +1,13 @@
-# Compatibility-aware Walking Awareness Dataset Comparison WAD Comparison
+# Compatibility-aware WAD Comparison
 
-This directory contains a trimmed public candidate copy of scripts and notes for
-the Compatibility-aware Walking Awareness Dataset Comparison WalkVLM/WAD comparison.
+This directory contains the earlier WAD training and text-evaluation workflow.
 
-## Contents
+- `code/scripts/`: training-data construction, validation, inference, and text evaluation.
+- `code/configs/`: LLaMA-Factory training and adapter-merge configurations.
+- `docs/`: original experiment notes.
 
-- `code/scripts/`: data-audit, training-variant construction, inference, and
-  evaluation helpers.
-- `code/configs/`: example training and merge config files.
-- `docs/`: experiment design, run notes, and evaluation notes.
-- `README.source.md` and `REPRODUCE.source.md`: source notes copied from the
-  local experiment package.
+The main comparison uses image-only input and the WAD `alter` field as the training target. The full-JSON variant is an auxiliary experiment, not the selected baseline in Table 8. The field name `alter` follows WAD's source format.
 
-## Public-Release Notes
+For the additional Hazard F1 and Category F1 evaluation, see [wad_structured_comparison](../wad_structured_comparison/README.md).
 
-This package is useful for documenting the comparison workflow, but it still
-depends on external WAD data and local model-training infrastructure. WAD-derived
-training JSON files and raw images are not included here.
-
-Before public upload, check the copied configs and source notes for local paths.
+WAD images, training JSON files, and model weights must be supplied separately. Configure paths before running the scripts. Original experiment notes may refer to files from the full experiment workspace that are not included in this repository.
